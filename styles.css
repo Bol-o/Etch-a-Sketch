@@ -1,0 +1,52 @@
+ /* Style for the grid container */
+ .grid-container {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    flex-wrap: wrap;
+    /*gap: 3px; /* Adjust gap between divs as needed */
+    max-height: 1440px;
+    max-width: 960px;
+}
+.div-container {
+    display: flex;
+    /*flex-shrink: 5;
+    justify-content: space-around;*/
+    max-height: 1440px; /* Adjust height as needed */
+    max-width: 960px;
+    background-color: #ccc; /* Background color 
+   /* border: 1px solid #888; /* Border */
+    box-sizing: border-box; /* Include border in width calculation */
+    text-align: center; /*Center text */
+    /*line-height: 50px; /* Vertical alignment */
+}
+/* Style for individual grid items */
+.grid-item {
+    flex: 1; /* Adjust width as needed */
+    /*flex-direction: row; */
+    min-height: 50px; /* Adjust height as needed */
+    min-width: 50px;
+    background-color: #ccc; /* Background color */
+    border: 6px solid #888; /* Border */
+    box-sizing: border-box; /* Include border in width calculation */
+    text-align: center; /*Center text */
+    /*line-height: 250px; /* Vertical alignment */
+}
+.grid-item-2 {
+    display: flex; /* Adjust width as needed */
+    height: 20%; /* Adjust height as needed */
+    width: 20%;
+    background-color: #ccc; /* Background color */
+    border: 1px solid #888; /* Border */
+    box-sizing: border-box; /* Include border in width calculation */
+    text-align: center; /*Center text */
+    line-height: 50px; /* Vertical alignment */
+}
+
+
+#container {
+    display: flex;
+    justify-content: center;
+    /*flex-wrap: wrap; */
+    /* align-items: center; */
+}

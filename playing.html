@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynamic Squares Inside Larger Square</title>
+<style>
+    /* Style for the outer container */
+    .outer-container {
+        width: 400px; /* Adjust initial width of the outer container */
+        max-height: 960px; /* Adjust initial height of the outer container */
+        background-color: lightblue; /* Background color of the outer container */
+        display: flex;
+        justify-content: space-around; /* Distribute children with space between */
+        align-items: center; /* Center the squares vertically */
+        padding: 20px; /* Add padding for spacing */
+    }
+
+    /* Style for the inner squares */
+    .inner-square {
+        flex: 1; /* Allow inner squares to grow and shrink */
+        background-color: orange; /* Background color of the inner squares */
+        min-width: 50px; /* Set minimum width of inner squares */
+        min-height: 50px; /* Set minimum height of inner squares */
+        border-color: aquax;
+        border: 3px solid;
+        padding: 15px;
+        margin: 12px;
+    }
+</style>
+</head>
+<body>
+
+<div class="outer-container">
+    <div class="inner-square"></div>
+    <div class="inner-square"></div>
+    <div class="inner-square"></div>
+</div>
+
+</body>
+</html>
