@@ -1,21 +1,31 @@
  /* Style for the grid container */
  .grid-container {
     display: flex;
-    flex-direction: column;
+    position: absolute;
+    top: 360%;
+    left: 37.5%;
+    flex-direction: column; 
+    justify-content:space-around;
+    background-color: pink;
+    /* border: 2px black solid; */
     /* justify-content: space-around; */
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     /*gap: 3px; /* Adjust gap between divs as needed */
-    max-height: 1440px;
+    max-height: 960px;
     max-width: 960px;
 }
 .div-container {
     display: flex;
+    /* margin: 5px; */
+    flex-grow: 1;
+    /* flex-grow: 4; */
+    justify-content: space-around;
     /*flex-shrink: 5;
     justify-content: space-around;*/
-    max-height: 1440px; /* Adjust height as needed */
-    max-width: 960px;
-    background-color: #ccc; /* Background color 
-   /* border: 1px solid #888; /* Border */
+    /*max-height: 184px; /* Adjust height as needed */
+    /*max-width: 184px;
+    background-color: #1a1818; /* Background color */ 
+    /*border: 3px solid #888; /* Border */
     box-sizing: border-box; /* Include border in width calculation */
     text-align: center; /*Center text */
     /*line-height: 50px; /* Vertical alignment */
@@ -24,10 +34,10 @@
 .grid-item {
     flex: 1; /* Adjust width as needed */
     /*flex-direction: row; */
-    min-height: 50px; /* Adjust height as needed */
-    min-width: 50px;
+    min-height: 54px; /* Adjust height as needed */
+    min-width: 54px; 
     background-color: #ccc; /* Background color */
-    border: 6px solid #888; /* Border */
+    /*border: 1px solid #888; /* Border */
     box-sizing: border-box; /* Include border in width calculation */
     text-align: center; /*Center text */
     /*line-height: 250px; /* Vertical alignment */

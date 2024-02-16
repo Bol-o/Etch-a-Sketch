@@ -1,6 +1,6 @@
  // Get a reference to the grid container
 function buildGrid (g) {
-
+ 
  var gridContainer = document.getElementById('gridContainer');
 
  // Loop to create 64 div elements (8x8 grid)
@@ -40,7 +40,13 @@ var question
 
 var mainButton = document.getElementById('main-button')
 mainButton.addEventListener('click', function(){
+
     question = prompt('what?')
+    
+    if (question > 100){
+        alert("try 16 or lower")
+        return 
+    }
     buildGrid(question)
 })
 mainButton.appendChild(body)
