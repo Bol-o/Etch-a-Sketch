@@ -4,6 +4,11 @@
     background-color: aqua;
     border: #1a1818 15px solid;
 }
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 header{
     margin: 20px;
 }
@@ -12,62 +17,31 @@ header{
 /* Style for the grid container */
  .grid-container {
     display: flex;
-    /* position: absolute; */
-    /* top: 20%;
-    left: 45%; */
-    flex-direction: column; 
-    /* justify-content:space-around; */
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;     
     background-color: pink;
-    /* border: 2px black solid; */
-    /* justify-content: space-around; */
-    /* flex-wrap: wrap; */
-    /*gap: 3px; /* Adjust gap between divs as needed */
     max-height: 960px;
     max-width: 960px;
+    border: solid 5px blue;
 }
 .div-container {
     display: flex;
-    /* margin: 5px; */
     flex-grow: 1;
-    /* flex-grow: 4; */
     justify-content: space-around;
-    /*flex-shrink: 5;
-    justify-content: space-around;*/
-    /*max-height: 184px; /* Adjust height as needed */
-    /*max-width: 184px;*/
-    background-color: #1a1818; /* Background color */ 
-    /*border: 3px solid #888; /* Border */
-    box-sizing: border-box; /* Include border in width calculation */
-    text-align: center; /*Cente text */
-    /*line-height: 50px; /* Vertical alignment */
+    background-color: #1a1818; 
 }
 /* Style for individual grid items */
 .grid-item {
-    /*flex: 0 0 calc(960px / var(--div2)); /* Adjust width as needed */
-    /*flex-direction: row; */
     height: calc(960px / var(--div2)); /* Adjust height as needed */
     width: calc(960px / var(--div2)); 
-    background-color: #ccc; /* Background color */
-    /*border: 1px solid #888; /* Border */
-    box-sizing: border-box; /* Include border in width calculation */
-    text-align: center; /*Center text */
-    /*line-height: 250px; /* Vertical alignment */
+    background-color: #ccc; 
 }
-.grid-item-2 {
-    display: flex; /* Adjust width as needed */
-    height: 20%; /* Adjust height as needed */
-    width: 20%;
-    background-color: #ccc; /* Background color */
-    border: 1px solid #888; /* Border */
-    box-sizing: border-box; /* Include border in width calculation */
-    text-align: center; /*Center text */
-    line-height: 50px; /* Vertical alignment */
-}
+
 
 
 #container {
     display: flex;
     justify-content: center;
-    /*flex-wrap: wrap; */
-    /* align-items: center; */
+    
 }
