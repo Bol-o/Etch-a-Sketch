@@ -2,6 +2,7 @@
 function buildGrid (g) {
  
  var gridContainer = document.getElementById('gridContainer');
+ gridContainer.innerHTML = '';
 
  // Loop to create 64 div elements (8x8 grid)
  for (var i = 0; i < g; i++) {
@@ -14,6 +15,7 @@ function buildGrid (g) {
 //     div2.classList.add('grid-item-2');
 //     div.appendChild(div2);
 //  }
+
 gridContainer.appendChild(div);
  
 for (let i = 0; i < g; i++){
@@ -33,6 +35,8 @@ for (let i = 0; i < g; i++){
 
  }
  
+ //document.documentElement.style.setProperty('--div2', div2);
+ 
 }
 
 var question
@@ -42,12 +46,14 @@ var mainButton = document.getElementById('main-button')
 mainButton.addEventListener('click', function(){
 
     question = prompt('what?')
+    document.documentElement.style.setProperty('--div2', question)
     
     if (question > 100){
-        alert("try 16 or lower")
+        alert("try 100 or lower")
         return 
     }
     buildGrid(question)
+
 })
 mainButton.appendChild(body)
 

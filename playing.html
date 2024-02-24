@@ -3,39 +3,76 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dynamic Squares Inside Larger Square</title>
+<title>Sketch Pad</title>
 <style>
-    /* Style for the outer container */
-    .outer-container {
-        width: 400px; /* Adjust initial width of the outer container */
-        max-height: 960px; /* Adjust initial height of the outer container */
-        background-color: lightblue; /* Background color of the outer container */
+    /* Styles for the container */
+    .container {
         display: flex;
-        justify-content: space-around; /* Distribute children with space between */
-        align-items: center; /* Center the squares vertically */
-        padding: 20px; /* Add padding for spacing */
+        flex-wrap: wrap;
+        /* width: 960px; /* Total width of the container */
+        /*height: 960px; /* Total height of the container */
+        /*border: 3px solid #ccc; */
     }
 
-    /* Style for the inner squares */
-    .inner-square {
-        flex: 1; /* Allow inner squares to grow and shrink */
-        background-color: orange; /* Background color of the inner squares */
-        min-width: 50px; /* Set minimum width of inner squares */
-        min-height: 50px; /* Set minimum height of inner squares */
-        border-color: aquax;
-        border: 3px solid;
-        padding: 15px;
-        margin: 12px;
+    /* Styles for the grid squares */
+    .grid-square {
+        flex: 0 0 calc(960px / var(--squares-per-side)); /* Set width of each grid square */
+        height: calc(960px / var(--squares-per-side)); /* Set height of each grid square */
+        background-color: #ddd;
+        /*width: 25px;*/
+        border: 1px solid #fff;
+        transition: background-color 0.3s; /* Add transition for smooth color change */
+    }
+
+    /* Hover effect */
+    .grid-square:hover {
+        background-color: #970d6e; /* Change background color on hover */
+    }
+
+    /* Style for the button */
+    #resetButton {
+        margin-top: 20px;
     }
 </style>
 </head>
 <body>
 
-<div class="outer-container">
-    <div class="inner-square"></div>
-    <div class="inner-square"></div>
-    <div class="inner-square"></div>
-</div>
+<button id="resetButton">Reset Grid</button>
+<div class="container" id="gridContainer"></div>
+
+<script>
+    // Get a reference to the reset button
+    var resetButton = document.getElementById('resetButton');
+
+    // Add event listener for the reset button
+    resetButton.addEventListener('click', function() {
+        var squaresPerSide = prompt("Enter the number of squares per side (maximum 100):");
+        
+        // Validate user input
+        if (squaresPerSide !== null && squaresPerSide !== "") {
+            squaresPerSide = parseInt(squaresPerSide);
+            if (isNaN(squaresPerSide) || squaresPerSide <= 0 || squaresPerSide > 100) {
+                alert("Please enter a valid number between 1 and 100.");
+                return;
+            }
+
+            // Remove existing grid
+            var gridContainer = document.getElementById('gridContainer');
+            gridContainer.innerHTML = '';
+
+            // Set CSS variable for the number of squares per side
+            
+
+            // Create new grid
+            for (var i = 0; i < squaresPerSide * squaresPerSide; i++) {
+                var div = document.createElement('div');
+                div.classList.add('grid-square');
+                gridContainer.appendChild(div);
+            }
+            document.documentElement.style.setProperty('--squares-per-side', squaresPerSide);
+        }
+    });
+</script>
 
 </body>
 </html>
