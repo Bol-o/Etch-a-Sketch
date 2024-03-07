@@ -1,11 +1,23 @@
-function tripleIt(arr){
-    let sum = 0;
-    for (let i = 0; i < arr.length; i++){
-        if (arr[i] % 2 == 0){
-            sum += arr[i]
-        }
+function addOne(num) {
+    return num + 1;
+  }
+  const arr = [1, 3, 3, 3, 5];
+  const newArr = []
+
+  function goThrough(array) {
+    for (let i = 0; i < array.length; i++){
+      newArr.push(addOne(array[i]))
+        
+        
     }
-    console.log(sum * 3)
-}
-let woo =  [2,4,6,1,7,2]
-tripleIt(woo)
+    for (let i = 0; i < newArr.length; i++){
+      arr.push(newArr[i])
+      arr.shift()
+    }
+    //console.log(newArr)
+    
+  }
+
+  goThrough(arr)
+  console.log(newArr)
+  console.log(arr)
